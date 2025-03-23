@@ -1,0 +1,45 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffe4ec, #fff0f5);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #d63384;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 3s infinite;
+}
+
+#frase {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}

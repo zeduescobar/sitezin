@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Isabella 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #fff7f9; /* rosa pastel bem clarinho */
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .content {
+      z-index: 10;
+      padding: 20px;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #d63384;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff4f91;
+    }
+
+    #frase {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: 20px;
+      color: #d63384;
+      display: none;
+    }
+
+    #imagemEspecial {
+      display: none;
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+      #frase {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio id="music" loop>
+    <source src="Radiohead - House of Cards.mp3" type="audio/mp3" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="content">
+    <h1>Para Isabella 💖</h1>
+    <button onclick="mostrarFraseComPetalas()">Clique aqui 🌸</button>
+    <p id="frase">Isabella, eu fiz esse site só pra dizer que teu jeito me deixa com um sorriso besta e eu gosto disso demais 😳🌼</p>
+    <img id="imagemEspecial" src="WhatsApp Image 2025-03-20 at 21.12.00.JPG" alt="Imagem especial" />
+    <canvas id="flowerCanvas"></canvas>
+  </div>
+
+  <script>
+    const audio = document.getElementById('music');
+
+    function mostrarFraseComPetalas() {
+      document.getElementById('frase').style.display = 'block';
+      document.getElementById('imagemEspecial').style.display = 'block';
+      iniciarPetalas();
+      audio.play();
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
